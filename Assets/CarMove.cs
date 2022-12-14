@@ -6,12 +6,12 @@ using System;
 
 public class CarMove : MonoBehaviour
 {
-    const float ACCELERATION = 0.00075f;
-    const float DECELERATION = -0.001f;
-    const float DECELERATION2 = -0.0003f;
-    const float BACKACCELERATION = 0.0002f;
-    const float BACKDECELERATION = -0.001f;
-    const float BACKDECELERATION2 = -0.0003f;
+    const float ACCELERATION = 0.000075f;
+    const float DECELERATION = -0.0001f;
+    const float DECELERATION2 = -0.00003f;
+    const float BACKACCELERATION = 0.00002f;
+    const float BACKDECELERATION = -0.0001f;
+    const float BACKDECELERATION2 = -0.00003f;
     const float MAX_SPEED = 0.5f;
     const float MAX_BREAK_SPEED = -1.0f;
     const float MAX_BACK_SPEED = 0.125f;
@@ -196,7 +196,7 @@ public class CarMove : MonoBehaviour
                     }
                     else
                     {
-                        kph = Mathf.RoundToInt(300 * (speed + backSpeed));
+                        kph = Mathf.RoundToInt(900 * (speed + backSpeed));
                     }
                 }
             }
@@ -1164,8 +1164,9 @@ public class CarMove : MonoBehaviour
 }
 
 //メモ
-//次回やること：爆弾を作ろう！
-//　　　　　　：解決できなかった問題　レーザー、地面に当たったら消えるスクリプト
+//次回やること：重力がない　とか初歩的な問題　を解決
+//　　　　　　：バージョンアップによる弊害の確認・解決
+//　　　　　　：爆弾のアセットがうまくいくか、レーザー問題(地面すり抜け)をどうするか
 
 //　　　　　　　爆弾　参考　https://ymgsapo.com/2021/02/05/unity-explosion-force/
 
