@@ -6,16 +6,16 @@ using System;
 
 public class CarMove : MonoBehaviour
 {
-    const float ACCELERATION = 0.000075f;
-    const float DECELERATION = -0.0001f;
-    const float DECELERATION2 = -0.00003f;
-    const float BACKACCELERATION = 0.00002f;
-    const float BACKDECELERATION = -0.0001f;
-    const float BACKDECELERATION2 = -0.00003f;
-    const float MAX_SPEED = 0.5f;
-    const float MAX_BREAK_SPEED = -1.0f;
-    const float MAX_BACK_SPEED = 0.125f;
-    const float ROT_SPEED = 1.0f;
+    const float ACCELERATION = 0.0000375f;
+    const float DECELERATION = -0.00005f;
+    const float DECELERATION2 = -0.000015f;
+    const float BACKACCELERATION = 0.00001f;
+    const float BACKDECELERATION = -0.00005f;
+    const float BACKDECELERATION2 = -0.000015f;
+    const float MAX_SPEED = 0.25f;
+    const float MAX_BREAK_SPEED = -0.5f;
+    const float MAX_BACK_SPEED = 0.0625f;
+    const float ROT_SPEED = 0.5f;
 
     //const float UPDOWNSPEED = 0.01f;
 
@@ -1164,8 +1164,7 @@ public class CarMove : MonoBehaviour
 }
 
 //メモ
-//次回やること：重力がない　とか初歩的な問題　を解決
-//　　　　　　：バージョンアップによる弊害の確認・解決
+//次回やること：ステージと追加ブロックの色が異なる問題
 //　　　　　　：爆弾のアセットがうまくいくか、レーザー問題(地面すり抜け)をどうするか
 
 //　　　　　　　爆弾　参考　https://ymgsapo.com/2021/02/05/unity-explosion-force/
