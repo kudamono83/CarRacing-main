@@ -9,12 +9,12 @@ public class CarMove : MonoBehaviour
     const float ACCELERATION = 0.0000375f;
     const float DECELERATION = -0.00005f;
     const float DECELERATION2 = -0.000015f;
-    const float BACKACCELERATION = 0.00001f;
-    const float BACKDECELERATION = -0.00005f;
-    const float BACKDECELERATION2 = -0.000015f;
+    const float BACKACCELERATION = 0.00002f;
+    const float BACKDECELERATION = -0.00010f;
+    const float BACKDECELERATION2 = -0.00003f;
     const float MAX_SPEED = 0.25f;
-    const float MAX_BREAK_SPEED = -0.5f;
-    const float MAX_BACK_SPEED = 0.0625f;
+    const float MAX_BREAK_SPEED = -1.0f;
+    const float MAX_BACK_SPEED = 0.125f;
     const float ROT_SPEED = 0.5f;
 
     //const float UPDOWNSPEED = 0.01f;
@@ -1164,9 +1164,7 @@ public class CarMove : MonoBehaviour
 }
 
 //メモ
-//次回やること：ステージと追加ブロックの色が異なる問題
-//　　　　　　：爆弾のアセットがうまくいくか、レーザー問題(地面すり抜け)をどうするか
-
+//次回やること：爆弾のアセットがうまくいくか
 //　　　　　　　爆弾　参考　https://ymgsapo.com/2021/02/05/unity-explosion-force/
 
 //　　　　　　　Item6・16の途中から。爆弾の非表示・表示、投げるなど、、、

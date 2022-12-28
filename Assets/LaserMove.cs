@@ -13,18 +13,16 @@ public class LaserMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.gameObject.transform.position -= this.gameObject.transform.forward;
+        this.gameObject.transform.position -= 0.1f * this.gameObject.transform.forward;
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(collision.gameObject.name);
-
-        if (collision.gameObject.tag == "Plane")
+        if(other.gameObject.tag == "Plane")
         {
-            //Debug.Log(collision.gameObject.name);
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
+
 }
