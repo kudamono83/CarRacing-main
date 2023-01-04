@@ -6,6 +6,7 @@ public class LaserManager : MonoBehaviour
 {
     public GameObject Laser;
     GameObject cloneObject;
+    MeshRenderer mr;
     //public GameObject Launcher;
     //private Rigidbody rb;
     //private float speed;

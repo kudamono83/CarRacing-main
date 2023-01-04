@@ -66,3 +66,12 @@ The following packages were updated:
   com.unity.textmeshpro from version 1.4.1 to 3.0.6
 The following packages were removed:
   com.unity.package-manager-ui@2.0.8
+
+=== Wed Jan  4 17:59:12 2023
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were added:
+  com.unity.postprocessing@2.3.0
+  com.unity.progrids@3.0.3-preview.4

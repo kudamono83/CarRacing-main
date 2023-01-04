@@ -1164,7 +1164,7 @@ public class CarMove : MonoBehaviour
 }
 
 //メモ
-//次回やること：爆弾のアセットがうまくいくか
+//次回やること：爆弾の設定・レーザーの透明化をするなど
 //　　　　　　　爆弾　参考　https://ymgsapo.com/2021/02/05/unity-explosion-force/
 
 //　　　　　　　Item6・16の途中から。爆弾の非表示・表示、投げるなど、、、

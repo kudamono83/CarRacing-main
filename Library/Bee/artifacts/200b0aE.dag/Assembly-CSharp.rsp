@@ -115,6 +115,7 @@
 -define:ENABLE_TIMELINE
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:CROSS_PLATFORM_INPUT
+-define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"/Applications/Unity/Hub/Editor/2021.3.7f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.CoreModule.dll"
@@ -331,6 +332,10 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.2D.Tilemap.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.Analytics.DataPrivacy.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
+-r:"Library/Bee/artifacts/200b0aE.dag/Unity.Postprocessing.Editor.ref.dll"
+-r:"Library/Bee/artifacts/200b0aE.dag/Unity.Postprocessing.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/200b0aE.dag/Unity.ProGrids.Editor.ref.dll"
+-r:"Library/Bee/artifacts/200b0aE.dag/Unity.ProGrids.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.Rider.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.Services.Analytics.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.Services.Analytics.ref.dll"
@@ -359,11 +364,13 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
 "Assets/AllTexts.cs"
+"Assets/BombMove.cs"
 "Assets/Canvas.cs"
 "Assets/CarMove.cs"
 "Assets/CheckPoint1.cs"
 "Assets/CheckPoint2.cs"
 "Assets/CheckPoint3.cs"
+"Assets/EffectExamples/Misc Effects/Scripts/SpawnEffect.cs"
 "Assets/ExplosionScript.cs"
 "Assets/GoalPass.cs"
 "Assets/Laser.cs"
@@ -379,6 +386,11 @@
 "Assets/SampleScenes/Scripts/PlaceTargetWithMouse.cs"
 "Assets/SampleScenes/Scripts/SlowMoButton.cs"
 "Assets/SensorScript.cs"
+"Assets/Shared/Ramps/Runtime/RampAsset.cs"
+"Assets/Shared/Scripts/AdjustTimeScale.cs"
+"Assets/Shared/Scripts/ProximityActivate.cs"
+"Assets/Shared/Scripts/SimpleCameraController.cs"
+"Assets/Shared/Scripts/SimpleCharacterMotor.cs"
 "Assets/Signal_1_Back_Move.cs"
 "Assets/Signal_1_Move.cs"
 "Assets/Signal_2_Back_Move.cs"
@@ -399,6 +411,7 @@
 "Assets/True Explosions/System/Scripts/exploders/Exploder.cs"
 "Assets/True Explosions/System/Scripts/exploders/Exploder2D.cs"
 "Assets/True Explosions/System/Scripts/exploders/SphereExploder.cs"
+"Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 
 /deterministic
