@@ -1164,8 +1164,9 @@ public class CarMove : MonoBehaviour
 }
 
 //メモ
-//次回やること：爆弾の設定・レーザーの透明化をするなど
-//　　　　　　　色を変えるやつ　https://tech.pjin.jp/blog/2018/09/05/unity_material_color-change/
+//次回やること：爆弾のパワーメーター設定、爆弾レーザーの透明化など
+//　　　　　　　パワーメーター　https://ekulabo.com/tutorial-power-meter
+
 //　　　　　　　爆弾　参考　https://ymgsapo.com/2021/02/05/unity-explosion-force/
 
 //　　　　　　　Item6・16の途中から。爆弾の非表示・表示、投げるなど、、、

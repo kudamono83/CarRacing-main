@@ -11,7 +11,7 @@ public class BombMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        gameObject.GetComponent<Renderer>().material.color = Color.black;
     }
 
     // Update is called once per frame
@@ -24,6 +24,8 @@ public class BombMove : MonoBehaviour
     {
         if(collision.gameObject.tag == "Plane")
         {
+            gameObject.GetComponent<Renderer>().material.color = Color.red;
+
             StartCoroutine(DelayCoroutine(1, () =>
             {
                 Vector3 explosionPos = transform.position;
@@ -40,6 +42,8 @@ public class BombMove : MonoBehaviour
                     if (rb != null)
                         rb.AddExplosionForce(power, explosionPos, radius, 3.0F);
                 }
+
+                Destroy(gameObject);
             }));
         }
     }
