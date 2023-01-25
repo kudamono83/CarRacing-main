@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ExplosionScript : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class ExplosionScript : MonoBehaviour
     GameObject cloneObject;
     Rigidbody rb;
 
+    public float Value;
+    public Slider Gauge;
+    private bool GaugeStop;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +24,8 @@ public class ExplosionScript : MonoBehaviour
         carMove = car.GetComponent<CarMove>();
 
         transform.position = new Vector3(0,0,0);
+
+        Value = 0;
     }
 
     // Update is called once per frame
@@ -30,6 +37,8 @@ public class ExplosionScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Y))
         {
+            GaugeStop = true;
+
             cloneObject = Instantiate(bomb, pos, Quaternion.identity);
             cloneObject.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
             cloneObject.transform.eulerAngles = worldAngle;
@@ -39,7 +48,7 @@ public class ExplosionScript : MonoBehaviour
             rb = cloneObject.GetComponent<Rigidbody>();
             rb.useGravity = true;
             rb.isKinematic = false;
-            rb.AddForce(cloneObject.transform.up * 350);
+            rb.AddForce(cloneObject.transform.up * (Value * 10 + 250));
         }
         //BombNumber = carMove.ItemNumber;
 
@@ -51,6 +60,18 @@ public class ExplosionScript : MonoBehaviour
         //{
             //sphere.SetActive (false);
         //}
+
+        Gauge.value = Value;
+
+        if(Value > 100)
+        {
+            Value = 1;
+        }
+
+        if(GaugeStop == false)
+        {
+            Value += Time.deltaTime * 100;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

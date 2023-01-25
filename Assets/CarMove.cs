@@ -1164,7 +1164,7 @@ public class CarMove : MonoBehaviour
 }
 
 //メモ
-//次回やること：爆弾のパワーメーター設定、爆弾レーザーの透明化など
+//次回やること：爆弾のパワーメーター表示非表示、爆弾レーザーの透明化など
 //　　　　　　　パワーメーター　https://ekulabo.com/tutorial-power-meter
 
 //　　　　　　　爆弾　参考　https://ymgsapo.com/2021/02/05/unity-explosion-force/
