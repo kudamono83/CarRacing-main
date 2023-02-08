@@ -1400,7 +1400,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b4dc78ff33d624f7d9307ab5b6b83fe6, type: 2}
+  - {fileID: 2100000, guid: 6e690fe60c3a44a9dab3c389d3e9fad6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2804,6 +2804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Laser: {fileID: 1035957223}
+  GreenColor: {fileID: 2100000, guid: 0541ab7f172554b0fbd658e481142eee, type: 2}
 --- !u!4 &268811650
 Transform:
   m_ObjectHideFlags: 0
@@ -7749,7 +7750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8884,7 +8885,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0541ab7f172554b0fbd658e481142eee, type: 2}
+  - {fileID: 2100000, guid: 6e690fe60c3a44a9dab3c389d3e9fad6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9870,7 +9871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.044875145, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11600,6 +11601,8 @@ MonoBehaviour:
   bomb: {fileID: 176752173}
   Value: 0
   Gauge: {fileID: 313734670}
+  BlackColor: {fileID: 2100000, guid: b4dc78ff33d624f7d9307ab5b6b83fe6, type: 2}
+  ClearColor: {fileID: 2100000, guid: 6e690fe60c3a44a9dab3c389d3e9fad6, type: 2}
 --- !u!4 &1290498823
 Transform:
   m_ObjectHideFlags: 0

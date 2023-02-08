@@ -17,6 +17,9 @@ public class ExplosionScript : MonoBehaviour
     public Slider Gauge;
     private bool GaugeStop;
 
+    public Material BlackColor;
+    public Material ClearColor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,8 @@ public class ExplosionScript : MonoBehaviour
         transform.position = new Vector3(0,0,0);
 
         Value = 0;
+        Gauge.gameObject.SetActive (false);
+        GaugeStop = true;
     }
 
     // Update is called once per frame
@@ -37,18 +42,33 @@ public class ExplosionScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            GaugeStop = true;
+            if (GaugeStop == true)
+            {
+                Gauge.gameObject.SetActive (true);
+                GaugeStop = false;
 
-            cloneObject = Instantiate(bomb, pos, Quaternion.identity);
-            cloneObject.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
-            cloneObject.transform.eulerAngles = worldAngle;
+                bomb.GetComponent<Renderer>().material.color = BlackColor.color;
+            }
+            else
+            {
+                GaugeStop = true;
 
-            cloneObject.AddComponent<BombMove>();
-            cloneObject.AddComponent<SphereCollider>();
-            rb = cloneObject.GetComponent<Rigidbody>();
-            rb.useGravity = true;
-            rb.isKinematic = false;
-            rb.AddForce(cloneObject.transform.up * (Value * 10 + 250));
+                cloneObject = Instantiate(bomb, pos, Quaternion.identity);
+                cloneObject.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+                cloneObject.transform.eulerAngles = worldAngle;
+
+                cloneObject.AddComponent<BombMove>();
+                cloneObject.AddComponent<SphereCollider>();
+                rb = cloneObject.GetComponent<Rigidbody>();
+                rb.useGravity = true;
+                rb.isKinematic = false;
+                rb.AddForce(cloneObject.transform.up * (Value * 10 + 250));
+
+                bomb.GetComponent<Renderer>().material.color = ClearColor.color;
+                cloneObject.GetComponent<Renderer>().material.color = BlackColor.color;
+
+                StartCoroutine(DelayCoroutine2());
+            }
         }
         //BombNumber = carMove.ItemNumber;
 
@@ -89,5 +109,14 @@ public class ExplosionScript : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         bomb.SetActive (false);
+    }
+
+    private IEnumerator DelayCoroutine2()
+    {
+        yield return new WaitForSeconds(2.0f);
+        if (GaugeStop == true)
+        {
+            Gauge.gameObject.SetActive (false);
+        }
     }
 }

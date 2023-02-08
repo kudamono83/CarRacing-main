@@ -6,13 +6,23 @@ public class LaserManager : MonoBehaviour
 {
     public GameObject Laser;
     GameObject cloneObject;
-    MeshRenderer mr;
+    public Material GreenColor;
+    //Color color;
+    //Color color2;
+    //MeshRenderer mr;
     //public GameObject Launcher;
     //private Rigidbody rb;
     //private float speed;
     // Start is called before the first frame update
     void Start()
     {
+        //cloneObject.GetComponent<Renderer>().material.color = GreenColor.color;
+        //color = Laser.GetComponent<Renderer>().material.color;
+        //color2 = cloneObject.GetComponent<Renderer>().material.color;
+
+        //color.a = 0;
+        //Laser.GetComponent<Renderer>().material.color = color;
+        //mr = cloneObject.GetComponent<MeshRenderer>();
         //rb = GetComponent<Rigidbody>();
         //speed = 5.0f;
     }
@@ -32,6 +42,12 @@ public class LaserManager : MonoBehaviour
 
             cloneObject.AddComponent<LaserMove>();
             cloneObject.AddComponent<MeshCollider>();
+
+            cloneObject.GetComponent<Renderer>().material.color = GreenColor.color;
+
+            //color2.a = 1.0f;
+            //cloneObject.GetComponent<Renderer>().material.color = color2;
+            //mr.material.color = mr.material.color - new Color32(0,0,0,255);
 
             //Rigidbody rb = cloneObject.AddComponent<Rigidbody>();
             //rb.velocity = cloneObject.transform.forward * speed;
