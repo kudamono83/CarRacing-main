@@ -40,7 +40,7 @@ public class ExplosionScript : MonoBehaviour
         Vector3 worldAngle = BomTransform.eulerAngles;
         Vector3 pos = BomTransform.position;
 
-        if (Input.GetKeyDown(KeyCode.Y))
+        if ((Input.GetKeyDown(KeyCode.I)) && (carMove.UseItem == 6))
         {
             if (GaugeStop == true)
             {
@@ -66,6 +66,9 @@ public class ExplosionScript : MonoBehaviour
 
                 bomb.GetComponent<Renderer>().material.color = ClearColor.color;
                 cloneObject.GetComponent<Renderer>().material.color = BlackColor.color;
+
+                carMove.UseItem = 0;
+                carMove.ItemNumber = 0;
 
                 StartCoroutine(DelayCoroutine2());
             }

@@ -7,6 +7,9 @@ public class LaserManager : MonoBehaviour
     public GameObject Laser;
     GameObject cloneObject;
     public Material GreenColor;
+
+    public GameObject Car;
+    CarMove carMove;
     //Color color;
     //Color color2;
     //MeshRenderer mr;
@@ -16,6 +19,7 @@ public class LaserManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        carMove = Car.GetComponent<CarMove>();
         //cloneObject.GetComponent<Renderer>().material.color = GreenColor.color;
         //color = Laser.GetComponent<Renderer>().material.color;
         //color2 = cloneObject.GetComponent<Renderer>().material.color;
@@ -34,7 +38,7 @@ public class LaserManager : MonoBehaviour
         Vector3 worldAngle = LasTransform.eulerAngles;
         Vector3 pos = LasTransform.position;
 
-        if (Input.GetKeyDown(KeyCode.T))
+        if ((Input.GetKeyDown(KeyCode.I)) && (carMove.UseItem == 4))
         {
             cloneObject = Instantiate(Laser, pos, Quaternion.identity);
             cloneObject.transform.localScale = new Vector3(0.05f, 0.05f, 2.5f);
@@ -44,6 +48,9 @@ public class LaserManager : MonoBehaviour
             cloneObject.AddComponent<MeshCollider>();
 
             cloneObject.GetComponent<Renderer>().material.color = GreenColor.color;
+
+            carMove.UseItem = 0;
+            carMove.ItemNumber = 0;
 
             //color2.a = 1.0f;
             //cloneObject.GetComponent<Renderer>().material.color = color2;
