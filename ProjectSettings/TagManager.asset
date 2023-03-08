@@ -12,6 +12,8 @@ TagManager:
   - Laser
   - Item1
   - Item2
+  - CloneLaser
+  - Explosion
   layers:
   - Default
   - TransparentFX

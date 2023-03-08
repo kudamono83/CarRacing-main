@@ -49,6 +49,8 @@ public class LaserManager : MonoBehaviour
 
             cloneObject.GetComponent<Renderer>().material.color = GreenColor.color;
 
+            cloneObject.tag = "CloneLaser";
+
             carMove.UseItem = 0;
             carMove.ItemNumber = 0;
 

@@ -1005,7 +1005,24 @@ public class CarMove : MonoBehaviour
 
         if (other.CompareTag("Item2"))
         {
-            rnd = UnityEngine.Random.Range(1, 8);
+            //rnd = UnityEngine.Random.Range(1, 8);
+            rnd = UnityEngine.Random.Range(1, 7);
+
+        //【試運転用】　確認後に消すこと
+        //ここから
+
+            if ((rnd == 1) || (rnd == 2))
+            {
+                rnd = 4;
+            }
+
+            if ((rnd == 3) || (rnd == 5))
+            {
+                rnd = 6;
+            }
+
+        //ここまで
+
 
             if (ItemNumber == 0)
             {
@@ -1164,9 +1181,9 @@ public class CarMove : MonoBehaviour
 }
 
 //メモ
-//次回やること：爆弾・レーザーをアイテムから出るようにする、敵を作る？
+//次回やること：敵を作る
 
-//　　　　　　　Item6・16の途中から。爆弾の非表示・表示、投げるなど、、、
+//　　　　　　　レーザーを複数打てるように調整
 
 //レーザーの当たり判定は敵などを作ってから。
 
