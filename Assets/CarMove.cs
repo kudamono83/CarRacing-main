@@ -320,7 +320,31 @@ public class CarMove : MonoBehaviour
 
         if (Input.GetKey(KeyCode.P))
         {
-            ItemNumber = 6;
+            rnd = UnityEngine.Random.Range(1, 7);
+
+            if ((rnd == 1) || (rnd == 2))
+            {
+                rnd = 4;
+            }
+
+            if ((rnd == 3) || (rnd == 5))
+            {
+                rnd = 6;
+            }
+
+            if (ItemNumber == 0)
+            {
+                ItemNumber = rnd;
+                Item2.SetActive(false);
+            }
+            else
+            {
+                if (ItemNumber2 == 0)
+                {
+                    ItemNumber2 = rnd;
+                    Item2.SetActive(false);
+                }
+            }
         }
 
         tmp = gameObject.GetComponent<Transform>().position;
@@ -1181,7 +1205,8 @@ public class CarMove : MonoBehaviour
 }
 
 //メモ
-//次回やること：敵を作る
+//次回やること：敵を作る(当たり判定)
+//　　　　　　　https://qiita.com/sensuikan1973/items/055384e1145bbbe73e40
 
 //　　　　　　　レーザーを複数打てるように調整
 

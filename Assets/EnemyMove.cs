@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
+    public GameObject Enemy;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class EnemyMove : MonoBehaviour
     {
         if ((collision.gameObject.tag == "CloneLaser") || (collision.gameObject.tag == "Explosion"))
         {
-            Destroy(this.gameObject);
+            Destroy(Enemy.gameObject);
         }
 
     }
