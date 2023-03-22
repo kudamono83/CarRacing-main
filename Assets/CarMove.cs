@@ -1205,8 +1205,7 @@ public class CarMove : MonoBehaviour
 }
 
 //メモ
-//次回やること：敵を作る(当たり判定)
-//　　　　　　　https://qiita.com/sensuikan1973/items/055384e1145bbbe73e40
+//次回やること：爆弾の当たり判定が微妙、飛び方もたまに若干おかしい点の修正
 
 //　　　　　　　レーザーを複数打てるように調整
 

@@ -38,7 +38,7 @@ public class LaserManager : MonoBehaviour
         Vector3 worldAngle = LasTransform.eulerAngles;
         Vector3 pos = LasTransform.position;
 
-        if ((Input.GetKeyDown(KeyCode.I)) && (carMove.UseItem == 4))
+        if ((Input.GetKeyDown(KeyCode.I)) && (carMove.ItemNumber == 4))
         {
             cloneObject = Instantiate(Laser, pos, Quaternion.identity);
             cloneObject.transform.localScale = new Vector3(0.05f, 0.05f, 2.5f);
