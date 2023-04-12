@@ -8,6 +8,8 @@ public class BombMove : MonoBehaviour
     public float power;
     public float radius;
 
+    public GameObject Sphere;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,10 @@ public class BombMove : MonoBehaviour
 
                 var ex = GameObject.Find("BigExplosion");
                 ex.transform.position = explosionPos;
+
                 ex.GetComponent<ParticleSystem>().Play();
+                //Sphere.AddComponent<SphereCollider>();
+                //Debug.Log ("TEST11111");
 
                 Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
                 foreach (Collider hit in colliders)
@@ -44,6 +49,8 @@ public class BombMove : MonoBehaviour
                 }
 
                 Destroy(gameObject);
+                //Destroy(Sphere.GetComponent<SphereCollider>());
+                //Debug.Log ("TEST22222");
             }));
         }
     }
