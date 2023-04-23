@@ -18,7 +18,7 @@ public class EnemyMove : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         if ((collision.gameObject.tag == "CloneLaser") || (collision.gameObject.tag == "Explosion"))
         {
