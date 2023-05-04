@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     public GameObject Enemy;
+    public GameObject target;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,7 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position = Vector3.MoveTowards(transform.position,target.transform.position,0.02f);
     }
 
     void OnTriggerEnter(Collider collision)
