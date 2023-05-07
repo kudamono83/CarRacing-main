@@ -27,4 +27,12 @@ public class EnemyMove : MonoBehaviour
         }
 
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Wall")
+        {
+            Debug.Log ("TEST11111");
+        }
+    }
 }

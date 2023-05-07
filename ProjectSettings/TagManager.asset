@@ -14,14 +14,15 @@ TagManager:
   - Item2
   - CloneLaser
   - Explosion
+  - Wall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
+  - Wall
   - 
   - Lighting
   - Ground
