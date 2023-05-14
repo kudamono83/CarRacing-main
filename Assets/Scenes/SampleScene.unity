@@ -3675,6 +3675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 970821627}
   target: {fileID: 0}
+  RndSign: {fileID: 0}
 --- !u!4 &396410461 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4884855890004146, guid: 694147b9bd46a9840a99351e3f40c330,
@@ -5680,6 +5681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 970821627}
   target: {fileID: 0}
+  RndSign: {fileID: 0}
 --- !u!1001 &623520080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6188,6 +6190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 970821627}
   target: {fileID: 0}
+  RndSign: {fileID: 0}
 --- !u!1001 &681649899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6952,6 +6955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 970821627}
   target: {fileID: 0}
+  RndSign: {fileID: 0}
 --- !u!1001 &788417192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9166,6 +9170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 970821627}
   target: {fileID: 857448827}
+  RndSign: {fileID: 1547087629}
 --- !u!65 &970821631
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14344,6 +14349,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1620714017}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1547087629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1663774146403748, guid: ec32700b9a5ec3f499c68b5a5e800776,
+    type: 3}
+  m_PrefabInstance: {fileID: 48235416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1547693925
 GameObject:
   m_ObjectHideFlags: 0
@@ -15500,6 +15511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 970821627}
   target: {fileID: 0}
+  RndSign: {fileID: 0}
 --- !u!1 &1653339215
 GameObject:
   m_ObjectHideFlags: 0
@@ -18511,6 +18523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 970821627}
   target: {fileID: 0}
+  RndSign: {fileID: 0}
 --- !u!1 &1987957679
 GameObject:
   m_ObjectHideFlags: 0

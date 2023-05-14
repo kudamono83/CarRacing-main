@@ -24,7 +24,7 @@ public class EnemySub : MonoBehaviour
         time -= Time.deltaTime;
         if(time <= 0.0f)
         {
-            transform.position　= Enemy.transform.position;
+            pos　= Enemy.transform.position;
             pos.y -= 1.00f;
             myTransform.position = pos;
             rndX = Random.Range(-30,30);
