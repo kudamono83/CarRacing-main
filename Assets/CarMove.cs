@@ -95,6 +95,8 @@ public class CarMove : MonoBehaviour
 
     int HowManyTimes;
 
+    //public gameObject Enemy;
+
 
     // Start is called before the first frame update
     void Start()
@@ -156,6 +158,11 @@ public class CarMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //float dx = Input.GetAxis("Horizontal") * Time.deltaTime * 3.0f;
+        //float dz = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+        //transform.position = new Vector3 (
+        //transform.position.x + dx, 0, transform.position.y + dz
+        //);
         //Debug.Log ();
         if (UseItem == 1)
         {
@@ -1205,7 +1212,7 @@ public class CarMove : MonoBehaviour
 }
 
 //メモ
-//次回やること：敵のクローン　どうにかしないとやばい
+//次回やること：敵のクローン　指定した標識にクローンできない問題
 //それか、クローンされた爆弾で設定するのもあり
 
 //　　　　　　　レーザーを複数打てるように調整

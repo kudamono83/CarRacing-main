@@ -7,10 +7,11 @@ public class EnemyMove : MonoBehaviour
     public GameObject Enemy;
     public GameObject target;
     double y;
-    GameObject cloneObject;
-    public GameObject RndSign;
+    public GameObject Car;
+    //GameObject cloneObject;
+    //public GameObject RndSign;
     Vector3 tmp;
-    int a;
+    //Transform a;
 
     // Start is called before the first frame update
     void Start()
@@ -21,20 +22,23 @@ public class EnemyMove : MonoBehaviour
         //{
             //rnd = UnityEngine.Random.Range(1, 49);
             //RndSign = GameObject.Find(("Sign")(rnd));
-            Transform SignTransform = RndSign.transform;
-            Vector3 pos = SignTransform.position;
-            Vector3 worldAngle = SignTransform.eulerAngles;
-            cloneObject = Instantiate(Enemy, pos, Quaternion.identity);
-            cloneObject.transform.eulerAngles = worldAngle;
 
             //++a;
         //}
+        transform.position = new Vector3(14,2,71);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position,target.transform.position,0.02f);
+        //いったん保留
+        //transform.position = Vector3.MoveTowards(transform.position,target.transform.position,0.02f);
+        //a = Car.transform.eulerAngles.y + 90.0f;
+        this.transform.LookAt(Car.transform);
+        Transform myTransform = this.transform;
+        Vector3 worldAngle = myTransform.eulerAngles;
+        worldAngle.x -= 90.0f;
+        myTransform.eulerAngles = worldAngle;
 
         tmp = gameObject.GetComponent<Transform>().position;
         y = tmp.y;
